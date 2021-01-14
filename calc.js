@@ -12,8 +12,23 @@ function mathButPress(operator) {}
 
 function equalButPress(num) {}
 
-function clearButPress() {}
+function clearButPress() {
+  let prevVal = ''
+  let newVal = ''
+  let resultVal = ''
+  let mathOperator = ''
+  let decimalClicked = false
 
-function copyButPress(num) {}
+  document.getElementById('entry').value = '0'
+}
 
-function pasteButPress(num) {}
+function copyButPress(num) {
+  valMemStored = document.getElementById('entry').value
+}
+
+function pasteButPress(num) {
+  if (valMemStored) {
+    document.getElementById('entry').value = valMemStored
+    newVal = valMemStored
+  }
+}
