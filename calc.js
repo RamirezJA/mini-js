@@ -6,7 +6,22 @@ let decimalClicked = false
 
 let valMemStored = ''
 
-function numButPress(num) {}
+function numButPress(num) {
+  if (resultVal) {
+    newVal = num
+    resultVal = ''
+  } else {
+    if (num === '.') {
+      if (decimalClicked != true) {
+        newVal += num
+        decimalClicked = true
+      }
+    } else {
+      newVal += num
+    }
+  }
+  document.getElementById('entry').value = newVal
+}
 
 function mathButPress(operator) {}
 
