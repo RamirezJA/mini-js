@@ -36,7 +36,31 @@ function mathButPress(operator) {
   }
 }
 
-function equalButPress(num) {}
+function equalButPress(num) {
+  decimalClicked = false
+  prevVal = parseFloat(prevVal)
+  newVal = parseFloat(newVal)
+
+  switch (mathOperator) {
+    case '+':
+      resultVal = prevVal + newVal
+      break
+    case '-':
+      resultVal = prevVal - newVal
+      break
+    case '*':
+      resultVal = prevVal * newVal
+      break
+    case '/':
+      resultVal = prevVal / newVal
+      break
+    default:
+      resultVal = newVal
+  }
+
+  prevVal = resultVal
+  document.getElementById('entry').value = resultVal
+}
 
 function clearButPress() {
   let prevVal = ''
