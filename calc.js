@@ -23,7 +23,18 @@ function numButPress(num) {
   document.getElementById('entry').value = newVal
 }
 
-function mathButPress(operator) {}
+function mathButPress(operator) {
+  if (!resultVal) {
+    prevVal = newVal
+  } else {
+    prevVal = resultVal
+    newVal = ''
+    decimalClicked = false
+    mathOperator = operator
+    resultVal = ''
+    document.getElementById('entry').value = ''
+  }
+}
 
 function equalButPress(num) {}
 
